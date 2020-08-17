@@ -1,0 +1,54 @@
+.AuthBox{
+	width:500px;margin:auto;box-shadow: 0px 0px 6px 2px #d0c6c6;padding:10px;border-radius: 2px;animation: boxcome 0.2s linear;background:white;
+}
+.Header{
+
+}
+.Header h1{
+	font-weight: normal;
+}
+.Inputs{
+	display: flex;flex-flow: column;padding:20px;padding-top:0;
+}
+.Input {
+	margin-bottom:10px!important;
+}
+.Controls{
+	padding-top:30px;display: flex;justify-content: flex-end;padding-right:20px;
+}
+.Rules{
+	position: absolute;display: flex;flex-flow: column;margin-top:-80px;padding-left:10px;padding-bottom:10px;
+}
+.Rules span{
+	text-align: left;color:#da4141;
+}
+.ErrorBox{
+	position: absolute;margin-left:20px;margin-top:-40px;padding:10px;border-radius: 10px;background:lightcoral;border:1px solid red;width:300px;animation: boxcome 0.2s linear;
+}
+.ErrorBox p{
+	margin:0;color:white;
+}
+.SocialLogins{
+	display: flex;padding-top:30px;align-items: center;
+}
+.SocialLogins p{
+	padding:10px;background:red;border-radius: 20px;background: #e8edf1;
+    box-shadow: 2px 2px 2px 1px #e2dbdb;
+}
+.ModeSwitcher {
+	margin-top:10px;
+}
+.ModeSwitcher button{
+	padding:0!important;
+}
+.ModeSwitcher a{
+	text-decoration: none;display: block;height: 100%;width:100%;padding:5px 10px;
+}
+@keyframes boxcome {
+	0%{
+		opacity:0.3;transform:translateY(60px) scale(0.9);
+	}
+	100%{
+		opacity: 1;transform:translateY(0) scale(1);
+	}
+}
