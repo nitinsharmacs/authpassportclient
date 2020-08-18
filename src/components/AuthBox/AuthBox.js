@@ -121,7 +121,7 @@ class AuthBox extends Component {
 				</div>:null
 				}
 				<div className={classes.ModeSwitcher}>
-					<Button>
+					<Button disabled={this.state.processing}>
  						<Link to={this.props.for==='login'?'/register':'/'}>Switch to {this.props.for==='login'?"Register":"Login"}</Link>
 					</Button>
 				</div>
