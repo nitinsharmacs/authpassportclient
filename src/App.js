@@ -20,13 +20,18 @@ class App extends Component {
  }
 
  loadAuthData = () => {
+
+  let token = document.cookie.split(';')[0].split('=')[1];
+
+
   this.setState({loading:true});
   fetch(process.env.REACT_APP_SERVER+'/user', {
     credentials:"include",
     headers:{
       Accept:'appliation/json',
       "Content-Type":"application/json",
-      "Access-Control-Allow-Credentials":true
+      "Access-Control-Allow-Credentials":true,
+      "Authorization":"Bearer "+token
     }
   }).then(res=>res.json()).then(result=>{
     console.log(result);
