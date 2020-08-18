@@ -54,8 +54,8 @@ class AuthBox extends Component {
 				throw new Error(result.message);
 			this.setState({processing:false});
 			if(this.props.for==='login'){
-				document.cookie = `token=${result.token};expires=${new Date(new Date().setHours(new Date().getHours()+5))}`
-				this.props.loginHandler();
+				document.cookie = `token=${result.token};expires=${ new Date(new Date().setHours(new Date().getHours()+5))}`;
+				this.props.loadAuthData();
 			} else {
 				this.props.history.replace('/login');
 			}

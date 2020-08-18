@@ -19,7 +19,7 @@ class Login extends Component {
 	render(){
 		return (
 			<div className={classes.Login}>
-				<AuthBox loginHandler={this.props.loginHandler} elements={this.state.elements} for='login' />
+				<AuthBox loadAuthData={this.props.loadAuthData} elements={this.state.elements} for='login' />
 			</div>
 			);
 	}
