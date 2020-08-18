@@ -1,5 +1,5 @@
 .Home{
-
+	margin-top:20vh;
 }
 .Navbar{
 	position:fixed;right:0;left:0;top:0;padding:20px;background:linear-gradient(to bottom, #3c49f3 10%, #8488ff 100%);
@@ -15,8 +15,17 @@
 	text-decoration: none;color:white;
 }
 .Content{
-
+	width:500px;margin:auto;
 }
 .Content h1{
 	font-weight: normal;background:linear-gradient(135deg , #6cb12d 60%, #4bff50 100%);padding:40px;border-radius: 50%;box-shadow:4px 4px 2px 2px #777272;color:white;
 }
+@media screen and (max-width:600px){
+	.Content{
+		width:80%;
+	}
+	.Content h1{
+		font-size:1.3rem;
+	}
+}
+
