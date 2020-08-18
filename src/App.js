@@ -32,7 +32,7 @@ class App extends Component {
     console.log(result);
     if(result.status!==201&&result.status!==200)
       throw new Error(result.message);
-    
+
     this.setState({loading:false, isLogined:true, userInfo:result.data});
   }).catch(err=>{
     console.log(err);
@@ -43,6 +43,8 @@ class App extends Component {
  logoutHandler = () => {
   this.setState({isLogined:false, userInfo:undefined});
   document.cookie = `token= ;expires=${new Date(1)}`;
+   document.cookie = `session= ;expires=${new Date(1)}`;
+    document.cookie = `session.sig= ;expires=${new Date(1)}`;
   window.open(process.env.REACT_APP_SERVER+'/auth/logout', "_self");
  }
   render(){
