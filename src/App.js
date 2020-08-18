@@ -43,8 +43,6 @@ class App extends Component {
  logoutHandler = () => {
   this.setState({isLogined:false, userInfo:undefined});
   document.cookie = `token= ;expires=${new Date(1)}`;
-   document.cookie = `session= ;expires=${new Date(1)}`;
-    document.cookie = `session.sig= ;expires=${new Date(1)}`;
   window.open(process.env.REACT_APP_SERVER+'/auth/logout', "_self");
  }
   render(){
