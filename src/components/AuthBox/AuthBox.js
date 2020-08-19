@@ -73,7 +73,7 @@ class AuthBox extends Component {
 				</div>
 				<div className={classes.Inputs}>
 					{
-						Object.keys(this.state.elements).map(key=><TextField autoFill={false} name={this.state.elements[key].name} className={classes.Input} label={this.state.elements[key].placeholder} variant='standard' value={this.state.elements[key].value} onChange={this.onChange} error={this.state.elements[key].touched&&!this.state.elements[key].valid} onBlur={this.onFocusOut}  />
+						Object.keys(this.state.elements).map(key=><TextField type={this.state.elements[key].type} autoFill={false} name={this.state.elements[key].name} className={classes.Input} label={this.state.elements[key].placeholder} variant='standard' value={this.state.elements[key].value} onChange={this.onChange} error={this.state.elements[key].touched&&!this.state.elements[key].valid} onBlur={this.onFocusOut}  />
 						)
 					}
 				</div>
