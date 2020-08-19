@@ -3,7 +3,7 @@ import classes from './App.css';
 import Login from './containers/Login/Login';
 import Register from './containers/Register/Register';
 import Home from './containers/Home/Home';
-import { Route, Switch } from 'react-router-dom';
+import { Route, Switch, withRouter } from 'react-router-dom';
 
 
 
@@ -47,6 +47,7 @@ class App extends Component {
 
  logoutHandler = () => {
   document.cookie = `token= ;expires=${new Date(1)}`;
+  this.props.history.replace('/');
   window.open(process.env.REACT_APP_SERVER+'/auth/logout', "_self");
  }
   render(){
@@ -64,4 +65,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default withRouter(App);
